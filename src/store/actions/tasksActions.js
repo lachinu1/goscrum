@@ -1,4 +1,6 @@
 // Función Actions - emulamos las acciones que se ejecutarán en el store (el primer fetch para traer las tareas
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { TASKS_REQUEST, TASKS_SUCCESS, TASKS_FAILURE } from '../types'; // importamos los tipos de acciones
 
@@ -43,7 +45,10 @@ export const deleteTask = id => dispatch => { // creamos la acción que se ejecu
             },
         })
         .then(response => response.json()) // leemos la respuesta y la convertimos a json
-        .then(() => dispatch(getTasks(""))) // si todo sale bien, ejecutamos la acción de traer las tareas
+        .then(() => { 
+            dispatch(getTasks("")) // si todo sale bien, ejecutamos la acción de traer las tareas
+            toast.success("Tarea eliminada"); // mostramos un toast de éxito
+        }) 
         .catch(error => dispatch(tasksFailure(error))) // si hay un error
 }
 

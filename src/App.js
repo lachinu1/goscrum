@@ -16,7 +16,7 @@ const  Error404 = lazy( ()=> import('./components/pages/Error404/Error404'))
 // Componente que verifica si el usuario está token
 const RequireAuth = ({ children }) => { // recibe como parámetro el componente hijo que se quiere renderizar 
     if (!localStorage.getItem('token')) { // Si no está token
-        return <Navigate to='/login' replace={true} /> // Redirecciona al login
+        return <Navigate to='/' replace={true} /> // Redirecciona al login
     }
     return children; // Si está token, renderiza el componente hijo (EN ÉSTA CASO ES TASKS)
 }

@@ -103,7 +103,7 @@ export const Tasks = () => {
 							<input type="text" placeholder="Buscar por título..." onChange={handleSearch} />
 						</div>
 						<select name="importance" id="importance" onChange={handleChangeImportance}>
-							<option value="">Selecciona una prioridad</option>
+							<option value="">Selecciona prioridad</option>
 							<option value="ALL">Todas</option>
 							<option value="HIGH">Alta</option>
 							<option value="MEDIUM">Media</option>

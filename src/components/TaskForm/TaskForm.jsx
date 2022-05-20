@@ -4,7 +4,6 @@ import * as Yup from 'yup';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
 import './taskform.css';
 
 const { REACT_APP_API_ENDPOINT: API_URL } = process.env;
@@ -32,7 +31,7 @@ export const TaskForm = () => {
             .then(res => res.json())
             .then(data =>  {
                 resetForm(); // se resetea el formulario
-                toast.success('Tu tarea fue creada'); // navega a la página principal
+                toast.success('Tu tarea fue creada'); // se muestra un mensaje de éxito
             }) 
     }
 
@@ -78,7 +77,7 @@ export const TaskForm = () => {
                             className={errors.status ? "error" : ""}
                             value={values.status}
                         >
-                            <option value="">Selecciona un estado</option>
+                            <option value="">Seleccionar estado</option>
                             <option value="NEW">Nueva</option>
                             <option value="IN PROGRESS">En Proceso</option>
                             <option value="FINISHED">Finalizada</option>
@@ -96,7 +95,7 @@ export const TaskForm = () => {
                             className={errors.importance ? "error" : ""}
                             value={values.importance}
                         >
-                            <option value="">Selecciona una prioridad</option>
+                            <option value="">Seleccionar prioridad</option>
                             <option value="HIGH">Alta</option>
                             <option value="MEDIUM">Media</option>
                             <option value="LOW">Baja</option>
