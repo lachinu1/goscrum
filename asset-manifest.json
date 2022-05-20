@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/goscrum/static/css/main.a33e41e5.css",
-    "main.js": "/goscrum/static/js/main.41de42f7.js",
+    "main.css": "/goscrum/static/css/main.7890df6c.css",
+    "main.js": "/goscrum/static/js/main.0b304203.js",
     "static/css/141.bd5cf0b0.chunk.css": "/goscrum/static/css/141.bd5cf0b0.chunk.css",
     "static/js/141.b529f614.chunk.js": "/goscrum/static/js/141.b529f614.chunk.js",
     "index.html": "/goscrum/index.html",
-    "main.a33e41e5.css.map": "/goscrum/static/css/main.a33e41e5.css.map",
-    "main.41de42f7.js.map": "/goscrum/static/js/main.41de42f7.js.map",
+    "main.7890df6c.css.map": "/goscrum/static/css/main.7890df6c.css.map",
+    "main.0b304203.js.map": "/goscrum/static/js/main.0b304203.js.map",
     "141.bd5cf0b0.chunk.css.map": "/goscrum/static/css/141.bd5cf0b0.chunk.css.map",
     "141.b529f614.chunk.js.map": "/goscrum/static/js/141.b529f614.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a33e41e5.css",
-    "static/js/main.41de42f7.js"
+    "static/css/main.7890df6c.css",
+    "static/js/main.0b304203.js"
   ]
 }
