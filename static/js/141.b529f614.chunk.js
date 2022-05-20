@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoscrum=self.webpackChunkgoscrum||[]).push([[141],{7141:function(n,r,c){c.r(r),c.d(r,{default:function(){return u}});c(2791);var e=c(184);function u(){return(0,e.jsx)("div",{className:"container",children:(0,e.jsx)("h1",{children:"Error 404 - P\xe1gina no encontrada"})})}}}]);
+//# sourceMappingURL=141.b529f614.chunk.js.map
