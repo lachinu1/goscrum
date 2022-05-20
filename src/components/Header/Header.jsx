@@ -19,7 +19,7 @@ import {
     Menu,
     MenuItem,
     Container,
-    Link,
+    Button,
     Tooltip
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -123,7 +123,7 @@ export const Header = () => {
                 <AppBar position="static">
                     <Container maxWidth="xl">
                         <Toolbar disableGutters>
-                            <img src="/img/logo.png" alt="logo" width="150"/>
+                            <img src="https://usercontent.one/wp/www.scrumbeginner.com/wp-content/uploads/2021/05/Scrum.org-logo-full.png" alt="logo" width="150"/>
                             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                                 <IconButton
                                     size="large"
@@ -163,27 +163,27 @@ export const Header = () => {
                             
                             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                                 {pages.map((page) => (
-                                    // <Button
-                                    //     key={page}
-                                    //     onClick={() => navigate(page === "Tareas" ? "/tareas" : "/donar", { replace: true })}
-                                    //     sx={{ my: 1, color: 'white', display: 'block' , fontFamily: 'Nunito', fontSize: '14px'}}
-                                    // >
-                                    //     {page}
-                                    // </Button>
-
-                                    <Link
-                                        key={page} href={page === "Tareas" ? "/tareas" : "/donar"}
-                                        sx={{ my: 1, color: 'white', display: 'block' , fontFamily: 'Nunito', fontSize: '14px'}}
-
-                                        >
+                                    <Button
+                                        key={page}
+                                        onClick={() => navigate(page === "Tareas" ? "/tareas" : "/donar", { replace: true })}
+                                        sx={{ my: 1, color: '#4a4a4a', display: 'block' , fontFamily: 'Nunito', fontSize: '14px', fontWeight: 'bold'}}
+                                    >
                                         {page}
-                                    </Link>
+                                    </Button>
+
+                                    // <Link
+                                    //     key={page} href={page === "Tareas" ? "/tareas" : "/donar"}
+                                    //     sx={{ my: 1, color: 'white', display: 'block' , fontFamily: 'Nunito', fontSize: '14px'}}
+
+                                    //     >
+                                    //     {page}
+                                    // </Link>
                                 ))}
                             </Box>
                             <Box sx={{ flexGrow: 0 }}>
                                
                                     <span>Tareas creadas:&nbsp;{tasks?.length}</span>&nbsp;&nbsp;
-                                    <span>{localStorage.getItem('userName')}</span>
+                                    <span>{localStorage.getItem('userName')}</span>&nbsp;
                               
                                 <Tooltip title="Perfil">
                                     <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -193,7 +193,7 @@ export const Header = () => {
                                                 anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
                                                 variant="dot"
                                             >
-                                                <Avatar alt={localStorage.getItem('userName')} src="/img/avatar.png" />
+                                                <Avatar alt={localStorage.getItem('userName')} src={localStorage.getItem('userName')} />
                                             </StyledBadge>
                                         </Stack>
                                     </IconButton>
