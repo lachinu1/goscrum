@@ -1,0 +1,21 @@
+{
+	"eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": false,
+	"prettier.tabWidth": 3,
+	"prettier.arrowParens": "avoid",
+	"prettier.useTabs": true,
+	"prettier.printWidth": 200,
+	"prettier.bracketSpacing": true,
+	"prettier.trailingComma": "es5",
+	"prettier.semi": false,
+	"prettier.singleQuote": false,
+	"editor.formatOnPaste": false,
+	"editor.formatOnType": true,
+	"editor.fontFamily": "Fira Code",
+	"editor.fontLigatures": false,
+	"editor.fontSize": 13
+}
