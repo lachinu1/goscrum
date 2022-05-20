@@ -6,7 +6,7 @@ import './error404.css';
 export default function Error404() {
     return (
         <div className="container">
-            Error 404 - Página no encontrada
+            <h1>Error 404 - Página no encontrada</h1>
         </div>
     );
 }

@@ -11,7 +11,7 @@ import { store } from './store/store';
 
 render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="goscrum/"> {/* basename es para que las rutas aparezcan completas */}
       <Provider store={store}> 
         <App />
       </Provider>
