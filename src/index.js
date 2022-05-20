@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import './index.css';
 import { App } from './App'; // lo importamos como una constante
 
@@ -11,11 +11,11 @@ import { store } from './store/store';
 
 render(
   <React.StrictMode>
-    <BrowserRouter basename="goscrum/"> {/* basename es para que las rutas aparezcan completas */}
+    <HashRouter> {/* basename es para que las rutas aparezcan completas */}
       <Provider store={store}> 
         <App />
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
