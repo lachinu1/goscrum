@@ -181,23 +181,26 @@ export const Header = () => {
                                 ))}
                             </Box>
                             <Box sx={{ flexGrow: 0 }}>
-                               
+                                <div div className="container-data">
                                     <span>Tareas creadas:&nbsp;{tasks?.length}</span>&nbsp;&nbsp;
-                                    <span>{localStorage.getItem('userName')}</span>&nbsp;
-                              
-                                <Tooltip title="Perfil">
-                                    <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                        <Stack direction="row" spacing={2}>
-                                            <StyledBadge
-                                                overlap="circular"
-                                                anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-                                                variant="dot"
-                                            >
-                                                <Avatar alt={localStorage.getItem('userName')} src={localStorage.getItem('userName')} />
-                                            </StyledBadge>
-                                        </Stack>
-                                    </IconButton>
-                                </Tooltip>
+                                    <div className="data">
+                                        <span>{localStorage.getItem('userName')}</span>&nbsp;
+                                        <Tooltip title="Perfil">
+                                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                                                <Stack direction="row" spacing={2}>
+                                                    <StyledBadge
+                                                        overlap="circular"
+                                                        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                                                        variant="dot"
+                                                    >
+                                                        <Avatar alt={localStorage.getItem('userName')} src={localStorage.getItem('userName')} />
+                                                    </StyledBadge>
+                                                </Stack>
+                                            </IconButton>
+                                        </Tooltip>
+                                    </div>
+                               </div>
+                                
                                 <Menu
                                     sx={{ mt: '45px' }}
                                     id="menu-appbar"

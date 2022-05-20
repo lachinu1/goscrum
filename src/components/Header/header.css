@@ -46,6 +46,15 @@ header > div {
     padding: 0 15px;
 }
 
+div.container-data {
+    display: flex;
+    align-items: center;
+}
+
+div.data {
+    display: block;
+}
+
 .wrapper_right_header > button {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -80,6 +89,10 @@ header > div {
 @media screen and (max-width: 768px) {
     header > img {
         width:100px;
+    }
+
+    div.container-data {
+        display: block;
     }
 }
 

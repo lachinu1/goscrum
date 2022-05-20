@@ -36,7 +36,7 @@ export const App = () => {
          <AnimatePresence>  {/* Componente que permite animar componentes que se eliminan o se agregan */}
             <Routes location={location} key={location.pathname}> {/* Rutas que se renderizan */}
                 <Route
-                    path="/login"
+                    path="/"
                     element={
                         <motion.div
                             className="page"
