@@ -67,7 +67,7 @@ export const Header = () => {
     const handlerLogout = () => { // redirigir al login
         localStorage.removeItem('token'); // elimina el token del localStorage
         localStorage.removeItem('userName'); // elimina el userName del localStorage
-        navigate('/login', { replace: true }); // replace: true para que no se pueda volver atrás
+        navigate('/', { replace: true }); // replace: true para que no se pueda volver atrás
     }
 
     const pages = ['Tareas', 'Donar'];

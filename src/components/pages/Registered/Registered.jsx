@@ -18,7 +18,7 @@ export default function Registered() {
                 <Button
                     variant="outlined"
                     color="error"
-                    onClick={() => navigate("/login", { replace: true })}
+                    onClick={() => navigate("/", { replace: true })}
                 >
                     <Typography textAlign="center">
                         <ArrowCircleRightIcon />

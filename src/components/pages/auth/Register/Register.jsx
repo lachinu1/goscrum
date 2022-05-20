@@ -185,7 +185,7 @@ export const Register = () => {
                     <button type="submit">Enviar</button>
                 </div>
                 <div>
-                    <Link to="/login"><span>Ir a Iniciar Sesión</span></Link>
+                    <Link to="/"><span>Ir a Iniciar Sesión</span></Link>
                 </div>
             </form>
         </div>
