@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import './index.css';
 
 // Redux
@@ -11,11 +11,11 @@ import { App } from './App'; // lo importamos como una constante
 
 render(
   <React.StrictMode>
-    <BrowserRouter basename="goscrum/"> 
+    <HashRouter> 
       <Provider store={store}> 
         <App />
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

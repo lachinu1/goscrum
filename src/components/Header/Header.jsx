@@ -70,7 +70,7 @@ export const Header = () => {
         navigate('/', { replace: true }); // replace: true para que no se pueda volver atrás
     }
 
-    const pages = ['Tareas', 'Donar'];
+    const pages = ['Donar'];
     const settings = ['Cerrar sesión'];
 
     const [anchorElNav, setAnchorElNav] = React.useState (null);
@@ -92,33 +92,6 @@ export const Header = () => {
     };
 
         return (
-            // <header>
-            //     <img src="/img/logo.png" alt="logo" />
-          
-            //     <div className="wrapper_right_header">
-             
-            //         <button onClick={() => navigate("/donar", { replace: true })}>Doná</button>
-                
-            //         <span>Tareas creadas: {tasks?.length}</span>
-            //         <span>{localStorage.getItem('userName')}</span>
-
-
-
-            //         <Stack direction="row" spacing={2}>
-            //             <StyledBadge
-            //                 overlap="circular"
-            //                 anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-            //                 variant="dot"
-            //             >
-            //                 <Avatar alt={localStorage.getItem('userName')} src="/img/avatar.png" />
-            //             </StyledBadge>
-            //         </Stack>
-                
-            //         <button onClick={handlerLogout}>
-            //             <ArrowCircleRightIcon />
-            //         </button>
-            //     </div>
-            // </header>
             <>
                 <AppBar position="static">
                     <Container maxWidth="xl">
@@ -165,7 +138,7 @@ export const Header = () => {
                                 {pages.map((page) => (
                                     <Button
                                         key={page}
-                                        onClick={() => navigate(page === "Tareas" ? "/tareas" : "/donar", { replace: true })}
+                                        onClick={() => navigate("/donar", { replace: true })}
                                         sx={{ my: 1, color: '#4a4a4a', display: 'block' , fontFamily: 'Nunito', fontSize: '14px', fontWeight: 'bold'}}
                                     >
                                         {page}
