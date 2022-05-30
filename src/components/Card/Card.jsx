@@ -27,12 +27,18 @@ export const Card = ({
 
 	const datetime = new Date(createdAt).toLocaleString().concat(" hs.") // Fecha y hora de creación
 
+
 	return (
 		<div className="card">
 			<div className="close" onClick={() => deleteCard(_id)}>
 				x
 			</div>
-			<h3>{title}</h3>
+			<div className="edit">
+				<h3>{title}</h3>
+				<button className="new" type="button" style={{ marginRight: '10px' }} /*onClick={() => editTask(data)}*/>
+					Editar
+				</button>	
+			</div>
 			<h6>{datetime}</h6>
 			<h5>Creada por: {userName}</h5>
 			<button className={status === "NEW" ? "new" : status === "IN PROGRESS" ? "inProgress" : "finished"} type="button" onClick={() => editCardStatus(data)}>

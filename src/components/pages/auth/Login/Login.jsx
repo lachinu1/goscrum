@@ -105,7 +105,7 @@ export const Login = () => {
                     <button type="submit">Enviar</button>
                 </div>
                 <div>
-                    <Link to="/registro">No tengo usuario. <span>Registrarme</span></Link>
+                    <Link to="/registro">Registrarme</Link>
                 </div>
             </form>
         </div>
