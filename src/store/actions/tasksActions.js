@@ -83,14 +83,16 @@ export const editTaskStatus = data => dispatch => { // creamos la acción que se
         .catch(error => dispatch(tasksFailure(error))) // si hay un error
 }
 
-// export const postTask = ({ values, resetForm }) => dispatch => { // creamos la acción que se ejecutará en el store
+// export const postTask = ( values, resetForm ) => dispatch => { // creamos la acción que se ejecutará en el store
 //     fetch(`${API_URL}task`, { // hacemos un fetch a la url)
 //         method: "POST", // le pasamos el método de post
 //         headers: {
 //             'Content-Type': 'application/json',
 //             Authorization: `Bearer ${localStorage.getItem('token')}`, // le pasamos el token al header
 //         },
-//         body: JSON.stringify({ ask: values}), // le pasamos el body con el estado de la tarea
+//         body: JSON.stringify({
+//             task: values, // le pasamos el body con el estado de la tarea
+//         }), 
 //     })
 //     .then(response => response.json()) // leemos la respuesta y la convertimos a json
 //     .then(() => {

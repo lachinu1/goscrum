@@ -35,9 +35,9 @@ export const Card = ({
 			</div>
 			<div className="edit">
 				<h3>{title}</h3>
-				<button className="new" type="button" style={{ marginRight: '10px' }} /*onClick={() => editTask(data)}*/>
+				{/* <button className="new" type="button" style={{ marginRight: '10px' }} onClick={() => editTask(data)}>
 					Editar
-				</button>	
+				</button>	 */}
 			</div>
 			<h6>{datetime}</h6>
 			<h5>Creada por: {userName}</h5>

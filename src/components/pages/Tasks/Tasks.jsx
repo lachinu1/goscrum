@@ -52,13 +52,26 @@ export const Tasks = () => {
 
     
 	const renderAllCards = () => { // Función para renderizar Todas las cards
-		return renderList.map(data => <Card key={data._id} data={data} deleteCard={handleDelete} editCardStatus={handleEditCardStatus} />) // renderiza Todas las tareas
+		return renderList.map(data =>
+			<Card
+				key={data._id}
+				data={data}
+				deleteCard={handleDelete}
+				editCardStatus={handleEditCardStatus}
+			/> // renderiza Todas las tareas
+		) 
 	}
 
 	const renderColumnCards = text => { // Función para renderizar las cards tareas
 		return renderList
 			.filter(data => data.status === text) // filtra las tareas
-			.map(data => <Card key={data._id} data={data} deleteCard={handleDelete} editCardStatus={handleEditCardStatus} />) // renderiza las tareas
+			.map(data =>
+				<Card key={data._id}
+					data={data}
+					deleteCard={handleDelete}
+					editCardStatus={handleEditCardStatus}
+				/> // renderiza las tareas por columnas
+			)
 	}
 
 	const handleChangeImportance = e => {

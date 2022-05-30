@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
@@ -6,10 +7,26 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import './taskform.css';
 
+// import { postTask } from "../../store/actions/tasksActions" // acceso a la acción de obtener tareas
+// import { useSelector, useDispatch } from "react-redux"
+
 const { REACT_APP_API_ENDPOINT: API_URL } = process.env;
 
 export const TaskForm = () => {
 
+    // Redux
+    // const dispatch = useDispatch()
+
+    // const { tasks } = useSelector(state => { // trae el estado de la acción de obtener tareas de tasksReducer
+	// 	return state.tasksReducer // se obtiene el estado de la acción de getTasks
+    // })
+
+    // useEffect(() => {
+    //     if (tasks) {
+    //         dispatch(postTask(values))
+    //     }
+    // }, [values, tasks, dispatch])
+    
     const initialValues = { // valores iniciales declarados
         title: '',
         status: '',
@@ -17,6 +34,10 @@ export const TaskForm = () => {
         description: ''
     }
 
+    const handleRefresh = () => {
+        window.location.reload(false);
+    }
+ 
     const onSubmit = () => {
         fetch(`${API_URL}task`, { // se envía el login a la API (POST)
             method: 'POST',
@@ -31,9 +52,13 @@ export const TaskForm = () => {
             .then(res => res.json())
             .then(data =>  {
                 resetForm(); // se resetea el formulario
-                toast.success('Tu tarea fue creada'); // se muestra un mensaje de éxito
+                toast.success('Tarea creada'); // se muestra un mensaje de éxito
+                handleRefresh(); // se ejecuta la función handleRefresh
             }) 
     }
+    
+  
+    // const onSubmit = postTask(); // se envía el método postTask
 
     const validationSchema = Yup.object({ // Objeto que contiene las validaciones
         title: Yup.string()
@@ -44,7 +69,6 @@ export const TaskForm = () => {
         description: Yup.string().required('* La descripción es requerida') // Validación de descripción
     })
 
-
     const formik = useFormik({ initialValues, onSubmit, validationSchema }) // declaramos formik
 
     const { handleChange, handleSubmit, errors, touched, handleBlur, values, resetForm } = formik; // desestructuramos values de formik
@@ -53,7 +77,7 @@ export const TaskForm = () => {
         <section className="task-form">
             <h2>Crear Tarea</h2>
             <p>Crea tus tareas</p>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} >
                 <div>
                     <div>
                         <input
